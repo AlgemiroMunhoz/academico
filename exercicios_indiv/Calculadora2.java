@@ -18,3 +18,4 @@ public class Calculadora2 {
 }
 
 // ALTERAÇÃO TESTE
+// outra atleração
