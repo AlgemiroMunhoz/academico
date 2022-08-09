@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
+body{
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 50%, #ffffff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.strip{
+    height: 16px;
+    width: 100%;
+    border-radius: 16px 16px 0px 0px;
+    background-image: repeating-linear-gradient(-45deg, #000000 0, #000000 10px, transparent 0, transparent 50%);
+    background-size: 59px 59px;
+    background-color: #8EC5FC;
+} 
+
+.avatar{
+    margin: 16px;
+    border-radius: 8px;
+}
+
+.bio{
+    margin: 0px 32px 16px;
+}
+
+#alterar{
+    background-color: #8EC5FC;
+    color: #3d3d3d;
+    padding: 8px 16px;
+    outline: none;
+    margin-top: 16px;
+    border:none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#alterar:hover{
+    background-color: #a0cffd;
+    cursor: pointer;
+}
+
+.profile-row{
+    display: flex;
+}
+
+.name-div{
+    margin: 32px;
+}
+
+input{
+    width: 500px;
+    height: 24px;
+    font-size: 24px;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.card{
+    width: 800px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.36);
+    border-radius: 16px 16px 0px 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 1px solid rgba(255, 255, 255, 0.63);
+}
