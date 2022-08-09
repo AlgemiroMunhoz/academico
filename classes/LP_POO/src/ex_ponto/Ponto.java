@@ -1,6 +1,6 @@
 package ex_ponto;
 
-import java.util.PrimitiveIterator;
+// import java.util.PrimitiveIterator;
 
 public class Ponto {
     private double x;
@@ -25,7 +25,7 @@ public class Ponto {
         return y;
     }
 
-    public void setY(double x) {
+    public void setY(double y) {
         this.y = y;
     }
 

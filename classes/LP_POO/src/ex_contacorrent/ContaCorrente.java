@@ -1,13 +1,15 @@
-package classes;
+package ex_contacorrent;
 
-public class ContaPoupanca {
+public class ContaCorrente {
     private String nome;
     private double saldo;
     private int n_conta;
     private int n_agencia;
-    
-    public ContaPoupanca(double saldo_inicial){
-        this.saldo = saldo_inicial;
+    private double limite;
+
+    public ContaCorrente(double saldo, double limite){
+        this.saldo = saldo;
+        this.limite = limite;
     }  
 
     // --------Get and setters ------------------------
@@ -40,7 +42,15 @@ public class ContaPoupanca {
     }
 
     public void setN_agencia(int n_agencia) {
-        this.n_conta = n_agencia;
+        this.n_agencia = n_agencia;
+    }
+    
+    public double getLimite() {
+        return this.limite;
+    }
+
+    public void setLimite(double limite) {
+        this.limite = limite;
     }
 
     public String toString() {
@@ -56,19 +66,23 @@ public class ContaPoupanca {
     public String depositar(double valor){
         if(valor > 0){
             this.saldo += valor;
+            System.out.println("Deposito efetuado");
+            System.out.println("saldo: R$ " + this.saldo);
             return "Deposito Efetuado!";
-        }
-
-        return "Deposito Efetuado! Verifiqueo valor!";
+        } 
+        return "Deposito Efetuado! Verifique o valor!";
     }
-
+    
     public String sacar (int valor){
-        if(valor > 0 && valor <= saldo){
+        if(valor > 0 && valor <= this.saldo + this.limite){
             this.saldo -= valor;
+            System.out.println("Saque efetuado, retire seu dinheiro");
+            System.out.println("saldo: R$ " + this.saldo);
             return "Saque efetuado, retire seu dinheiro!";
         }
 
         return "Erro ao efetuar o saque, verifique o valor";
-    }    
-}
+    }
 //quando digitar o saque saber quantas notas de 5, 10 e 50
+    
+}

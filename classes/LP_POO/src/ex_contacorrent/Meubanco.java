@@ -1,6 +1,6 @@
-package classes;
+package ex_contacorrent;
 
-import javax.crypto.SealedObject;
+// import javax.crypto.SealedObject;
 import javax.security.sasl.Sasl;
 
 public class Meubanco {

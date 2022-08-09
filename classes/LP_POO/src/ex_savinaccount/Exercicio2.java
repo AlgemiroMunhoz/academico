@@ -1,4 +1,4 @@
-package classes;
+package ex_savinaccount;
 
 public class Exercicio2 {
 

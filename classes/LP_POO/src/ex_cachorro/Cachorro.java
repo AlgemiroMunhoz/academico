@@ -1,4 +1,4 @@
-package classes;
+package ex_cachorro;
 public class Cachorro{
     // model = todos os atributos gatter e setter
     //  ------------------ attributes -------------------------

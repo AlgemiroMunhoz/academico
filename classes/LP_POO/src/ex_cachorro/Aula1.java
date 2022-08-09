@@ -10,7 +10,7 @@
 // # Protect 
 // N Package 
 
-package classes;
+package ex_cachorro;
 public class Aula1{
     //private int j = 0; atributo encapsulado
     public static void main(String[] args) { //metodo
