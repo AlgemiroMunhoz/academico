@@ -1,7 +1,5 @@
 package poo.ex_ponto;
 
-// import java.util.PrimitiveIterator;
-
 public class Ponto {
     private double x;
     private double y;

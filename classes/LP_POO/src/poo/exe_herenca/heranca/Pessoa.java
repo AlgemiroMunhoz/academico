@@ -1,5 +1,7 @@
 package poo.exe_herenca.heranca;
 
+import java.time.LocalDate;
+
 public abstract class Pessoa {
     protected String nome;
     protected String endereco;
@@ -7,6 +9,12 @@ public abstract class Pessoa {
 
     // --------Get and setters ------------------------
         
+    public Pessoa(String nome2, LocalDate dtNascimento, String endereco2) {
+    }
+
+    public Pessoa() {
+    }
+
     public String getNome() {
         return this.nome;
     }
@@ -19,6 +27,9 @@ public abstract class Pessoa {
         return this.endereco;
     }
 
+    /**
+     * @param endereco
+     */
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
