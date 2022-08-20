@@ -1,4 +1,4 @@
-package LP.Trab_robo;
+package LP.robo;
 
 import poo.ex_ponto.Ponto;
 

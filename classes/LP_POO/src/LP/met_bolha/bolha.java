@@ -1,4 +1,4 @@
-package poo.met_bolha;
+package LP.met_bolha;
 
 // import javax.print.event.PrintEvent;
 
