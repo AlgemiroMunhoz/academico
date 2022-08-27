@@ -1,4 +1,4 @@
-package LP.robo;
+package LP.trab_robo;
 
 public class RobotDemos {
 

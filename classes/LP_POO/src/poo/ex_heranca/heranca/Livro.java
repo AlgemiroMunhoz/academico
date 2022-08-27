@@ -1,4 +1,4 @@
-package poo.exe_herenca.heranca;
+package poo.ex_heranca.heranca;
 
 import java.time.LocalDate;
 
@@ -39,5 +39,9 @@ public class Livro {
   public String toString() {
     return "Título: " + this.titulo;
   }
+
+public static Livro cadastrarLivro() {
+    return null;
+}
 }
 

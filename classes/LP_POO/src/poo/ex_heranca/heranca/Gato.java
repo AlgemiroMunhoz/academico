@@ -1,4 +1,4 @@
-package poo.exe_herenca.heranca;
+package poo.ex_heranca.heranca;
 
 public class Gato extends AnimalTerrestre {
     public Gato(){

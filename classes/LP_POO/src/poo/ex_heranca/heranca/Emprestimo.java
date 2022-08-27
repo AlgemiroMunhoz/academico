@@ -1,4 +1,4 @@
-package poo.exe_herenca.heranca;
+package poo.ex_heranca.heranca;
 
 import java.time.LocalDate;
 
