@@ -26,15 +26,13 @@ public class Robo {
         // robot.keyRelease(KeyEvent.VK_F5);
 
         // //Pressiona as teclas ALT + F4
-        //  robot.keyPress(KeyEvent.VK_ALT);
-        //  robot.keyPress(KeyEvent.VK_F4);
-        //  robot.keyRelease(KeyEvent.VK_ALT);
-        //  robot.keyRelease(KeyEvent.VK_F4);
+        robot.keyPress(KeyEvent.VK_ALT);
+        robot.keyPress(KeyEvent.VK_F4);
+        robot.keyRelease(KeyEvent.VK_ALT);
+        robot.keyRelease(KeyEvent.VK_F4);
 
         // Pressione a tecla prtsc
         robot.keyPress(KeyEvent.VK_PRINTSCREEN);
         robot.keyRelease(KeyEvent.VK_PRINTSCREEN);
-
-        
     }
 }

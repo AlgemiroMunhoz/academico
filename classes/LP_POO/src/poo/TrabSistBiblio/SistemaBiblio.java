@@ -17,8 +17,8 @@
 // 3. Crie uma classe Emprestimo com os seguintes atributos:
 // - Livro livro
 // - Usuario usuario
-// - LocalDate dataEmprestimo
-// - LocalDate dataDevolucao
+// - Data de devolução
+// - Data de Empréstimo
 
 // 4. Crie uma classe Biblioteca com os seguintes atributos:
 // - ArrayList<Livro> livros

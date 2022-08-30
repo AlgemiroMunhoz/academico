@@ -22,7 +22,7 @@ public class Aula1{
         // instanciando atraves do operador new
         // apos o new chamo o construtor da classe
 
-        // ----------------- estaniando objeto ----------------------------
+        // ----------------- estansiando objeto ----------------------------
         doguinho.setNome("Rex");
         doguinho.setIdade(7);
         doguinho.setRaca("Caramelo");

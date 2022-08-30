@@ -4,8 +4,8 @@ import java.time.LocalDate;
 
 public class Livro {
     private String titulo;
-  private String editora;
-  private LocalDate dtLancamente;
+    private String editora;
+    private LocalDate dtLancamente;
 
   public Livro(String titulo) {
     this.titulo = titulo;
