@@ -12,6 +12,8 @@ package poo.TrabSistBiblio.heranca;
 import poo.ex_heranca.heranca.Livro;
 
 public class LivroBiblio {
+    
+    //atributos
     private String titulo;
     private String autor;
     private String isbn;
@@ -36,9 +38,18 @@ public class LivroBiblio {
   aceita argumentos, é apresentado como método com o mesmo nome da classe.
    */
 
-  public LivroBiblio(String titulo) {
+  // public LivroBiblio(String titulo) {
+  //   this.titulo = titulo;
+  // }
+
+  public LivroBiblio(String titulo, String autor, String isbn) {
     this.titulo = titulo;
+    this.autor = autor;
+    this.isbn = isbn;
   }
+
+
+  //Uma Classe pode ter vário construtores. Posso criar dois ou mais construtores.
 
   
   // ---------- Métodos ----------
@@ -63,6 +74,9 @@ public class LivroBiblio {
   Essas classes são reunidas em estruturas, chamadas de "Bibliotecas" ou "Libraries" e são enormes.
   Em Java, a biblioteca se chama "Java Class Library" e tem cerca de seis mil classes disponíveis que podemos 
   usar, o.NetFrameWork, para C Sharp e VB.Net, tem ainda mais classes do que isso. O C++, o Ruby, Python, Swift, BitC, Dart e muitas outras linguagens também possuem bibliotecas padrão para você usar. */
+
+  //Pegar o valore e atribuir o valor. Signficado de GETTER and SETTER.
+  //Public é um modificador de acesso.
 
   public String getTitulo() {
     return titulo;

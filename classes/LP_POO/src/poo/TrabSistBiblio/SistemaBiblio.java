@@ -38,9 +38,14 @@
 // Os empréstimos são realizados entre usuários e livros, e possuem uma data de empréstimo, uma data de devolução e um funcionário responsável pelo empréstimo.
 // Os funcionários possuem um nome, um CPF, um endereço, um número de telefone e um cargo.
 
+// ALT+Shift+O = alto import
+
 package poo.TrabSistBiblio;
 
 public class SistemaBiblio {
+    public static void main(String[] args) {
+
+    }
     
 }
 

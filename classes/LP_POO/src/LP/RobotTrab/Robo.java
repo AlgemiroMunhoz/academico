@@ -1,4 +1,4 @@
-package LP.trab_robo;
+package LP.RobotTrab;
 
 import java.awt.Robot;
 /*Utilizando classe usada para gerar eventos de entrada do sistema
