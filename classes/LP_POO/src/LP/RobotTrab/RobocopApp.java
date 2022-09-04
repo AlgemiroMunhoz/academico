@@ -1,79 +1,51 @@
 package LP.RobotTrab;
 
+import java.util.Scanner;
+
 public class RobocopApp {
     
     public static void main(String[] args){
-    
-        Robocop algemiro = new Robocop(0, 0, null);
-        //Metodo para o Robo andar para frente
-        //O Robo deve andar 10 cm para frente
+        Scanner leitorString = new Scanner(System.in);
+        Scanner leitorInt = new Scanner(System.in);
+        
+        /*A classe Scanner tem como objetivo separar a entrada dos textos em blocos, gerando os conhecidos tokens,
+        que são sequências de caracteres separados por delimitadores que por padrão correspondem aos espaços em
+        branco, tabulações e mudança de linha. */
 
-        public void andarFrente(){
-            if(this.direcao.equals("N")){
-                this._y -=10;
-            }
-            else if (this.direcao.equals("S")){
-                this._y +=10;
-            }
-            else if (this.direcao.equals("L")){
-                this._x -=10;
-            }
-            else if (this.direcao.equals("O")){
-                this._x +=10;
-            }
-        }
-    
-        //Metodo para o Robo virar a esqueda
-        //O Robo deve virar 90 graus à esquerda
-    
-        public void virarE(){
-            if(this.direcao.equals("N")){
-                this.direcao = "O";
-            }
-            else if (this.direcao.equals("S")){
-                this.direcao = "L";
-            }
-            else if (this.direcao.equals("L")){
-                this.direcao = "N";
-            }
-            else if (this.direcao.equals("0")){
-                this.direcao = "S";
-            }
-        }
-    
-        //Metodo para o Robo virar à direita
-        //O Robo deve virar 90 graus à direita
-    
-        public void virarD(){
-            if(this.direcao.equals("N")){
-                this.direcao = "L";
-            }
-            else if (this.direcao.equals("S")){
-                this.direcao = "O";
-            }
-            else if (this.direcao.equals("L")){
-                this.direcao = "S";
-            }
-            else if (this.direcao.equals("O")){
-                this.direcao = "N";
-            }
-        }
-    
-        //Metodo para o Robo virar obstáculos à sua frente.
-        // O Robo deve para de se movimentar caso haja um obstáculo à sua frente
-    
-        // public boolean verificarObstaculo(){
-        //     if (this.sensor.detectarObstaculo(this._x,this._y, this.direcao)){
-        //         return true;
-        //     }
-        //     return false;
-        // }
-    
-        //Metodo para imprimir a posicao atual do Robo
-    
-        public void imprimirPosicao(){
-            System.out.println("Posição atual do Robo: ("+this._x+","+this._y+")");
-        }
+        /* Para ler Scanner em Java: basta utilizarmos os métodos next do tipo primitivo no formato nextTipoDado().
+        Como no código abaixo. Scanner scanner = new Scanner(System.in); int numeroInteiro = scanner. nextInt();
+        byte numeroByte = scanner.
+        */
 
+        //Criando um novo Robo
+
+        Robocop algemiro = new Robocop(0,0);
+
+
+        while (true) {
+            //Entranda de dados do usuário
+            System.out.println("Digite qual direção [Norte, Sul, Leste, Oeste]:");
+            String direcao = leitorString.nextLine();
+            System.out.println("Digite quantas casas devo mover [int]: ");
+            int casas = leitorInt.nextInt();
+            
+            //Implementação do método
+            algemiro.movimentar(direcao, casas);
+            System.out.println("Configuração escolhida: " + casas + " casas ao " + direcao + "");
+            
+
+            //Encerrar o loop
+            System.out.println("\n\n\n\n");
+            System.out.println("Deseja continuar? [0-NÃO // 1-SIM]");
+            
+            int opcao = leitorInt.nextInt();
+            if (opcao == 0) {
+                break;
+            }
+        }
+        
+        //Encerrando Scanner 
+        leitorString.close();
+        leitorInt.close();
     }
 }

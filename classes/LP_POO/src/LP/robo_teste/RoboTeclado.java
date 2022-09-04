@@ -1,4 +1,4 @@
-package LP.RobotTrab;
+package LP.robo_teste;
 
 import java.awt.Robot;
 /*Utilizando classe usada para gerar eventos de entrada do sistema
@@ -15,7 +15,7 @@ do componente. ( KeyAdapterobjetos implementam a KeyListenerinterface.)
 Cada objeto ouvinte obtém isso KeyEventquando o evento ocorre.
 */
 
-public class Robo {
+public class RoboTeclado {
 
     public static void main(String[] args) throws Exception {
         Robot robot = new Robot();

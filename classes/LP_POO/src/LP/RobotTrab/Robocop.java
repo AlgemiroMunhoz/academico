@@ -2,17 +2,9 @@
 Criar um robô em java para se movimentar em uma mesa.
 O robô deve ser capaz de se movimentar para frente e para trás, virar à esquerda e à direita e detectar 
 obstáculos à sua frente. 
-
 O robô deve ter os seguintes atributos:
 Posição x e y na mesa (em cm);
 - Direção na qual está olhando (Norte, Sul, Leste ou Oeste);
-- Um sensor de obstáculos.
-
-O robô deve ser capaz de se movimentar para frente e para trás, virar à esquerda e à direita.
-O robô deve parar de se movimentar caso haja um obstáculo à sua frente.
-
-O robô será capaz de se movimentar para frente e para trás, virar à esquerda e à direita.
-O robô deve parar de se movimentar caso haja um obstáculo à sua frente.
 */
 
 package LP.RobotTrab;
@@ -24,22 +16,14 @@ public class Robocop {
     private int _y;
 
     //Direcao na qual o robo esta olhando
-    //N=Norte, S=Sul, L=Leste, O=Oeste
-    private String direcao;
-
-    //Sensor de obstáculos
-    // private ObstaculosSensor sensor;
-    // private ObstaculosSensororizado sensor;
-
-   
+    //Norte, Sul, Leste, Oeste
+    // private String direcao;
 
     //Construtor do Robo, inicializando sua posição e direção
-    public Robocop(int _x, int _y, String direcao){
+    public Robocop(int _x, int _y){
         this._x = _x;
         this._y = _y;
-        this.direcao = direcao;
-        // this.sensor = new ObstaculosSensor();
-        // this.sensor = new ObstaculosSensororizado(_y, _y, _y, null, sensor);
+        // this.direcao = direcao;
     }
 
     public int get_x() {
@@ -58,12 +42,34 @@ public class Robocop {
         this._y = _y;
     }
 
-    public String getDirecao() {
-        return direcao;
-    }
+    // public String getDirecao() {
+    //     return direcao;
+    // }
 
-    public void setDirecao(String direcao) {
-        this.direcao = direcao;
+    // public void setDirecao(String direcao) {
+    //     this.direcao = direcao;
+    // }
+
+
+     //Metodo para a moviemntação do Robo
+
+    public void movimentar(String direcao, int casas) {
+        if (direcao.equals("Norte")) {
+            this._x += casas;
+        } else if (direcao.equals("Sul")) {
+            this._y -= casas;
+        } else if (direcao.equals("Leste")) {
+            this._y += casas;
+        } else if (direcao.equals("Oeste")) {
+            this._x -= casas;
+        }
+
+
+        //Imprimir na tela a posição do Robo
+
+        System.out.println("Posição atual do robo: ");
+        System.out.println("Posição Plano carteziano X: " + this._x);
+        System.out.println("Posição Plano carteziano Y: " + this._y);
     }
 }
     

@@ -19,7 +19,7 @@ package LP.robo_teste;
 
 public class Robo {
 
-public static void main(String[] args) throws Exception {}
+public static void main(String[] args) throws Exception {
     //Posicao x e y do Robo na mesa (em cm)
     private int _x;
     private int _y;
@@ -27,12 +27,6 @@ public static void main(String[] args) throws Exception {}
     //Direcao na qual o robo esta olhando
     //N=Norte, S=Sul, L=Leste, O=Oeste
     private String direcao;
-
-    //Sensor de obstáculos
-    // private ObstaculosSensor sensor;
-    // private ObstaculosSensororizado sensor;
-
-   
 
     //Construtor do Robo, inicializando sua posição e direção
     public Robo(int _x, int _y, String direcao){
@@ -113,4 +107,4 @@ public static void main(String[] args) throws Exception {}
         System.out.println("Posição atual do Robo: ("+this._x+","+this._y+")");
     }
 }
-
+}
