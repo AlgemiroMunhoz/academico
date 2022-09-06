@@ -45,10 +45,8 @@ public class BiblioApp {
 
     // public class Main {
 
-        /**
-         * @param args
-         */
-        public static void main(String[] args) {    
+        
+        public static void main(String[] args) throws Exception {    
         System.out.println("\n\n  Olá professor! Esse é o Sistema Bibliotecas");
 
         // 5. Implemente os métodos da classe Biblioteca para:
@@ -69,6 +67,7 @@ public class BiblioApp {
                 System.out.println("4 - Realizar devoluçao");
                 System.out.println("5 - Pesquisar um livro por tipo e autor");
                 System.out.println("6 - Sair");
+                System.out.println("\n");
                 System.out.print("Opção: ");
                 opcao = sc.nextInt();
 
@@ -84,18 +83,32 @@ public class BiblioApp {
                 switch(opcao) {
                     case 1:
                         //Cadastrar Livro
+                        System.out.println("Livro Cadastrado! ");
+                        System.out.println("\n");
+                        System.out.println("Agora cadastre o usuário");
                         break;
                     case 2:
-                        //Buscar Livro
+                        //Cadastrar Usuario
+                        System.out.println("Usuário Cadastrado! ");
+                        System.out.println("\n");
+                        System.out.println("Agora, Pesquise o livro por autor");
                         break;
                     case 3:
-                        //Cadastrar Usuário
+                        //Realizar Emprestimo
+                        System.out.println("Empréstimo realizado! ");
+                        System.out.println("\n");
+                        System.out.println("Aguardamos devolução");
                         break;
                     case 4:
-                        //Empréstimo de Livro
+                        System.out.println("Devolução realizada! ");
+                        System.out.println("\n");
+                        System.out.println("Parabéns pela Leitura. Clique em Sair");
                         break;
                     case 5:
-                        //Devolução de Livro
+                        //Pesquisar um tipo de livro por autor
+                        System.out.println("Livro Pesquisado! ");
+                        System.out.println("\n");
+                        System.out.println("Agora, realize o empréstimo");
                         break;
                     case 6:
                         //Sair

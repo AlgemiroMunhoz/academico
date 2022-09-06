@@ -15,6 +15,6 @@
         <input type="button" value="enviar">
     </form>
 </html>
-<?php
+<?
 
 // http://localhost

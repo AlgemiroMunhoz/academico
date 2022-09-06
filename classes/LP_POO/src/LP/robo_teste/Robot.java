@@ -17,22 +17,22 @@ O robô deve parar de se movimentar caso haja um obstáculo à sua frente.
 
 package LP.robo_teste;
 
-public class Robo {
+public class Robot {
 
-public static void main(String[] args) throws Exception {
     //Posicao x e y do Robo na mesa (em cm)
     private int _x;
     private int _y;
+    private Object direcao;
 
     //Direcao na qual o robo esta olhando
     //N=Norte, S=Sul, L=Leste, O=Oeste
-    private String direcao;
+    // private String direcao;
 
     //Construtor do Robo, inicializando sua posição e direção
-    public Robo(int _x, int _y, String direcao){
+    public Robot(int _x, int _y){
         this._x = _x;
         this._y = _y;
-        this.direcao = direcao;
+        // this.direcao = direcao;
         // this.sensor = new ObstaculosSensor();
         // this.sensor = new ObstaculosSensororizado(_y, _y, _y, null, sensor);
         
@@ -40,56 +40,56 @@ public static void main(String[] args) throws Exception {
     
     //Metodo para o Robo andar para frente
     //O Robo deve andar 10 cm para frente
-    public void andarFrente(){
-        if(this.direcao.equals("N")){
-            this._y -=10;
+    public void andarFrente(String direcao, int casas){
+        if(direcao.equals("N")){
+            this._x += casas;
         }
-        else if (this.direcao.equals("S")){
-            this._y +=10;
+        else if (direcao.equals("S")){
+            this._y -= casas;
         }
-        else if (this.direcao.equals("L")){
-            this._x -=10;
+        else if (direcao.equals("L")){
+            this._x += casas;
         }
-        else if (this.direcao.equals("O")){
-            this._x +=10;
+        else if (direcao.equals("O")){
+            this._y -= casas;
         }
     }
 
-    //Metodo para o Robo virar a esqueda
-    //O Robo deve virar 90 graus à esquerda
+    // //Metodo para o Robo virar a esqueda
+    // //O Robo deve virar 90 graus à esquerda
 
-    public void virarE(){
-        if(this.direcao.equals("N")){
-            this.direcao = "O";
-        }
-        else if (this.direcao.equals("S")){
-            this.direcao = "L";
-        }
-        else if (this.direcao.equals("L")){
-            this.direcao = "N";
-        }
-        else if (this.direcao.equals("0")){
-            this.direcao = "S";
-        }
-    }
+    // public void virarE(){
+    //     if(this.direcao.equals("N")){
+    //         this.direcao = "O";
+    //     }
+    //     else if (this.direcao.equals("S")){
+    //         this.direcao = "L";
+    //     }
+    //     else if (this.direcao.equals("L")){
+    //         this.direcao = "N";
+    //     }
+    //     else if (this.direcao.equals("0")){
+    //         this.direcao = "S";
+    //     }
+    // }
 
     //Metodo para o Robo virar à direita
     //O Robo deve virar 90 graus à direita
 
-    public void virarD(){
-        if(this.direcao.equals("N")){
-            this.direcao = "L";
-        }
-        else if (this.direcao.equals("S")){
-            this.direcao = "O";
-        }
-        else if (this.direcao.equals("L")){
-            this.direcao = "S";
-        }
-        else if (this.direcao.equals("O")){
-            this.direcao = "N";
-        }
-    }
+    // public void virarD(){
+    //     if(this.direcao.equals("N")){
+    //         this.direcao = "L";
+    //     }
+    //     else if (this.direcao.equals("S")){
+    //         this.direcao = "O";
+    //     }
+    //     else if (this.direcao.equals("L")){
+    //         this.direcao = "S";
+    //     }
+    //     else if (this.direcao.equals("O")){
+    //         this.direcao = "N";
+    //     }
+    // }
 
     //Metodo para o Robo virar obstáculos à sua frente.
     // O Robo deve para de se movimentar caso haja um obstáculo à sua frente
@@ -104,7 +104,9 @@ public static void main(String[] args) throws Exception {
     //Metodo para imprimir a posicao atual do Robo
 
     public void imprimirPosicao(){
-        System.out.println("Posição atual do Robo: ("+this._x+","+this._y+")");
+        System.out.println("Posição atual do robo: ");
+        System.out.println("Posição Plano carteziano X: " + this._x);
+        System.out.println("Posição Plano carteziano Y: " + this._y);
     }
 }
-}
+
