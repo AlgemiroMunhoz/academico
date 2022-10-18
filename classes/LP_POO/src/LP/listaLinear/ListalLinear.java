@@ -14,7 +14,7 @@ public class ListalLinear {
     //linear class - Classe linear
     public static class No {
         public int info;
-        public No prox;
+        public No prox; //Armazenando o endereço do próximo elemento
     }
 
     public static void main(String[] args) {
@@ -41,10 +41,21 @@ public class ListalLinear {
     public static Lista addInicio (Lista l, int val) {
         No n1 = new No();
         n1.info = val;
+
+        if (isempty(l)){
+            n1.prox = l.inicio;
+            l.fim = n1;
+            return l;
+        }
+
         n1.prox = l.inicio;
         l.inicio = n1;
         return l; 
     }
+
+    // Adicionar no final
+    public static boolean isempty (Lista l) {
+        return l.tam == 0 ? false : true; 
 
     // percorre a lista
     public static void printLista (Lista l) {
@@ -76,7 +87,19 @@ public class ListalLinear {
         }
         aux.prox = novo;
         return l;
-
     }        
+
+    public static Lista addFimv2(Lista l, int val){
+       if(isempty(l)){
+        l = new addInicio(l, val); // leticia 
+        return l;
+       }
+
+        No novo = new No();
+        novo.info = val;
+        l.fim.prox = novo;
+        l.fim = novo;
+        return l;
+    }
 }
 
