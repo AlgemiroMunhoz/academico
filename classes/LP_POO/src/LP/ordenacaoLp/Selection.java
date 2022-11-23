@@ -1,13 +1,13 @@
-package lp.ordenacao;
+package LP.ordenacaoLp;
 
 import java.util.Random;
 
-public class Bubble {
-  private static final int TAM = 500000;
+public class Selection {
+  private static final int TAM = 8;
 
   public static void main(String[] args) {
-    int vetor[] = new int[TAM];
     Random rand = new Random();
+    int vetor[] = new int[TAM];
     for (int i = 0; i < vetor.length; i++) {
       vetor[i] = rand.nextInt(TAM * TAM - 1) + 1;
     }
@@ -15,23 +15,20 @@ public class Bubble {
     System.out.println("Vetor desordenado:");
     print(vetor);
 
-    System.out.println("\n\nVetor ordenado");
-    boolean troca = false;
-    int numComparacao = 0;
-    do {
-      int x = 0;
-      troca = false;
-      for (int j = 0; j < vetor.length - 1; j++) {
-        numComparacao++;
-        if (vetor[j] > vetor[j + 1]) {
-          troca = true;
-          int aux = vetor[j];
-          vetor[j] = vetor[j + 1];
-          vetor[j + 1] = aux;
+    for (int i = 0; i < TAM; i++) {
+      int menor = i;
+      for (int j = i; j < TAM; j++) {
+        if (vetor[j] < vetor[menor]) {
+          menor = j;
         }
       }
-    } while (troca);
+      // trocaria os elementos
+      int aux = vetor[i];
+      vetor[i] = vetor[menor];
+      vetor[menor] = aux;
+    }
 
+    System.out.println("\n\nVetor ordenado:");
     print(vetor);
   }
 
@@ -42,3 +39,4 @@ public class Bubble {
     }
   }
 }
+Footer

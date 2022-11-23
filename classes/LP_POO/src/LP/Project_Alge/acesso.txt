@@ -1,0 +1,7 @@
+
+https://dev.mysql.com/downloads/connector/j/ 
+Plataforma independente
+Baixar o .Zip
+Após o dowload extrair
+copiar o arquivo .Jar
+Colar em lib
