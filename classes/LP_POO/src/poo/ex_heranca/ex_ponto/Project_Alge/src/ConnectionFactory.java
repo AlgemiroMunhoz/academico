@@ -1,3 +1,4 @@
+package poo.Project_Alge.src;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -9,13 +10,13 @@ public class ConnectionFactory {
 
         //Variaveis criadas
         String url = "jdbc:mysql//localhost:3306/aulaDB";
-        String user = "root";
+        String _user = "root";
         String password = "";
 
         try{
             //carrega o driver de mysql.
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(url, user, password); //retorna a conexão
+            Connection conn = DriverManager.getConnection(url, _user, password); //retorna a conexão
             System.out.println("Conected:");
             return conn;
 

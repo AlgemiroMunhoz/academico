@@ -1,9 +1,11 @@
-package LP.Project_Alge.src;
+package poo.Project_Alge.src;
+
+import java.time.LocalDate;
 
 public class Carro {
     private int id;
     private String name;
-    private LocalDate date_fabricacao; 
+    private LocalDate date_fabricacao;
     private Double valor;
     
     public int getId() {
