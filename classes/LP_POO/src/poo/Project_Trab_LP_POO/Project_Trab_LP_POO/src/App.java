@@ -11,6 +11,6 @@ public class App {
 
         // Conecta a árvore binária de busca com o banco de dados MySQL
         arvore.conectarArvoreComMySQL(driver, url, usuario, senha);
-    }
+    }  
 
 }
