@@ -1,3 +1,4 @@
+package poo.Project_Trab_LP_POO;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -5,7 +6,7 @@ import java.sql.Statement;
 
 public class ArvoreBinariaDeBuscaMySQL {
 
-// Classe Nó
+    // Classe Nó
     public static class No {
         int chave;
         No esquerda, direita;
@@ -74,10 +75,11 @@ public class ArvoreBinariaDeBuscaMySQL {
                     inserir(chave);
                 }
             }
+            catch (Exception e){
+                throw e;
+            }
             finally {
-                if (conexaoBanco != null) {
-                    conexaoBanco.close();
-                }
+                conexaoBanco.close();
             }
         }
     }
