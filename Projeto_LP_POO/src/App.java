@@ -1,11 +1,6 @@
-package poo.Project_Trab_LP_POO;
-import poo.Project_Trab_LP_POO.ArvoreBinariaDeBuscaMySQL.ArvoreBinariaDeBusca;
-
-//Metodo Main
-public class AppAbb {
-
+// Metodo Main
+public class App {
     public static void main(String[] args) throws Exception {
-        
         //Cria uma nova árvore binária de busca
         ArvoreBinariaDeBusca arvoreBinariaDeBusca = new ArvoreBinariaDeBusca();
 
@@ -14,7 +9,7 @@ public class AppAbb {
         String url = "jdbc:mysql://localhost:3306/arvore_binaria_de_busca";
         String usuario = "root";
         String senha = "";
-
+        
         try {
             // Chama o método que conecta a árvore binária de busca com o banco de dados MySQL
             arvoreBinariaDeBusca.conectarArvoreComMySQL(driver, url, usuario, senha);

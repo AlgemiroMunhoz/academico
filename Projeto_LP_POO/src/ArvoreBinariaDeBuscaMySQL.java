@@ -1,4 +1,3 @@
-package poo.Project_Trab_LP_POO;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
